@@ -10,8 +10,8 @@ openai.api_key = API_KEY
 
 def download_twitch_clip(clip_url, output_path="clip.%(ext)s"):
     ydl_opts = {
-        'outtmpl': output_path,  # Формат имени файла
-        'format': 'worst',  # Скачивает лучшее качество
+        'outtmpl': output_path, 
+        'format': 'worst',  
         'overwrites': True
     }
 
