@@ -4,6 +4,7 @@ You will need to install chrome extention using chrome dev tools to run this.
 Create .env file in root directory with your chatgpt api key. 
 Be aware that this extension using gpt-4o-mini-transcribe api. Do your own research about cost.
 Env file should look like this "API_KEY=YOURKEY"
-You would have to install all the dependencies. Such as audio_extract, yt_dlp, and openai.
-After that, run python server.py.
+After that, run pip install -r requirements.txt 
+and python server.py.
+For youtube functionality you would need ffmpeg. Grab these three exe files from ffmpeg-git-essentials.7z. https://www.gyan.dev/ffmpeg/builds/
 I did use AI to build this.
