@@ -2,7 +2,9 @@ from audio_extract import extract_audio
 import yt_dlp
 import openai
 import os
+from pathlib import Path
 from dotenv import load_dotenv
+speech_file_path = Path(__file__).parent / "speech.mp3"
 
 load_dotenv()
 
@@ -48,6 +50,15 @@ def transcribe():
 )
     print(transcription.text)
     return transcription.text
-    
+
+def text_to_speech(text): 
+    with openai.audio.speech.with_streaming_response.create(
+    model="gpt-4o-mini-tts",
+    voice="coral",
+    input=text,
+    instructions="Speak in a cheerful and positive tone.",
+) as response:
+        response.stream_to_file(speech_file_path)
+        
 if __name__ == "__main__":
     main()

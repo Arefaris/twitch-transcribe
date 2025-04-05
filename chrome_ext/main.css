@@ -27,8 +27,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-p {
-    border: 1px solid #ddd;
-    padding: 5px;
-    min-height: 20px;
+#output {
+    min-height: 50px;
 }
+
